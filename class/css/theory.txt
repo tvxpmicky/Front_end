@@ -3,4 +3,20 @@ css 포함 방법
 1. inline
  ex) <div style="color:red"></div>
 
-2. 
+2.
+
+
+
+
+**** width / max-width / min-width ****
+
+ width: 가로길이
+ max-width: 최대 가로길이
+ min-width: 최소 가로길이
+
+
+
+**** float property **** 띄우다
+ float: left
+ float: right
+ float: none
