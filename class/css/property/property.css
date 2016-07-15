@@ -59,6 +59,8 @@ th, td{
   margin:200px
 }
 
+
+
 /* display property*/
 
 .display-inline{
@@ -125,4 +127,81 @@ th, td{
   height:200px;
   background-color:gray;
 
+}
+
+/* position property */
+
+.relative-wrap{
+  width:300px;
+  height: 200px;
+  border:1px solid violet;
+  margin-bottom:100px;
+
+}
+.position-relative{
+  position:relative;
+  top:20px;
+  left:30px;
+
+  background-color:salmon;
+}
+.outer{
+  position:relative;
+  width:500px;
+  height:500px;
+
+  background-color:lightblue;
+}
+
+.absolute-wrap{
+  position:absolute;
+  right:30px;
+  bottom:50px;
+  width: 300px;
+  height:200px;
+  border:1px solid brown;
+  margin-bottom:100px;
+}
+
+.position-absolute{
+  position:absolute;
+  top:20px;
+  left:30px;
+
+  background-color:yellow;
+}
+
+.position-fixed{
+  position:fixed;
+  bottom: 10px;
+  right:30px;
+
+  width:100px;
+  height:100px;
+  background-color:saddlebrown;
+}
+
+.overlap-parent{
+  position:relative;
+  width:300px;
+  height:200px;
+  border:1px solid darkorchid;
+}
+
+.overlap-a{
+  position:absolute;
+  top:10px;
+  left:10px;
+  width:100px;
+  height:100px;
+  background-color:palevioletred;
+}
+
+.overlap-b{
+  position:absolute;
+  top:50px;
+  left:50px;
+  width:100px;
+  height:100px;
+  background-color:bisque;
 }
