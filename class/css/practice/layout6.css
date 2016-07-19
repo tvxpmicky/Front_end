@@ -1,0 +1,59 @@
+.wrap{
+  width:1000px;
+  margin:0 auto;
+  color:#fff
+}
+
+
+.container:after{
+  content:"";
+  display:block;
+  clear:both;
+}
+
+.content_1{
+  width:600px;
+  float:left;
+}
+
+.one{
+  height: 200px;
+  width: 600px;
+  background: cornflowerblue;
+}
+
+.two{
+  height: 500px;
+  width: 600px;
+  background: darkgoldenrod;
+}
+
+.content_2{
+  width:400px;
+  float:right;
+}
+
+.three {
+  width: 400px;
+  height: 300px;
+  background: darkolivegreen;
+}
+
+.four {
+  width: 400px;
+  height: 100px;
+  background: darkkhaki;
+}
+
+.five {
+  width: 400px;
+  height: 300px;
+  background: cadetblue;
+
+}
+
+.footer{
+  height:200px;
+  background:wheat;
+  clear:both;
+}
