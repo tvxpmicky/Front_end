@@ -5,18 +5,10 @@
   <title>베스킨라빈스 홈페이지</title>
   <link rel="stylesheet" href="css/reset.css"/>
   <link rel="stylesheet" href="css/baskinrabins.css"/>
-  <style>
-    .btn-search{
-      display:block;
-      width:54px;
-      height:54px;
-      background:url(images/icon_search.png)no-repeat;
-      text-indent:-99999em;
-      border:0;
-      cursor:pointer;
-    }
 
-  </style>
+  <script src="js/jquery-3.1.0.js"></script>
+  <script src="js/gnb.js"></script>
+
 </head>
 <body>
 
@@ -57,7 +49,7 @@
         <ul class="cs">
           <li class="cs-item"><a href="#" class="cs-link">고객센터</a></li>
           <li class="cs-item"><a href="#" class="cs-link">윤리신고센터</a></li>
-          <li class="cs-item"><a href="#" class="cs-link">CONTACTUS</a></li>
+          <li class="cs-item"><a href="#" class="cs-link">CONTACT US</a></li>
         </ul>
 
         <div class="btn-wrap">
@@ -72,317 +64,325 @@
   <nav class="nav">
     <div class="small-wrap">
       <ul class="nav-member">
-        <li class="nav-member-item"><a href="#" class="nav-member-link">LOGIN</a></li>
-        <li class="nav-member-item"><a href="#" class="nav-member-link">JOIN</a></li>
-      </ul>
+        <li class="nav-member-item"><a href="#" class="nav-member-link login">LOGIN</a></li>
+        <!-- [D] 로그인 되었을 때 표시되는 태그 라인 -->
+        <!--
+        <li class="nav-member-item"><a href="#" class="nav-member-link logout">LOGOUT</a></li>
+        -->
+        <li class="nav-member-item"><a href="#" class="nav-member-link join">JOIN</a></li>
+        <!-- [D] 로그인 되었을 때 표시되는 태그 라인 -->
+        <!--
+       <li class="nav-member-item"><a href="#" class="nav-member-link mypage">MY PAGE</a></li>
+         -->
+     </ul>
 
-      <ul class="gnb">
-        <li class="gnb-depth1-item">
-          <a href=""  class="gnb-depth1-link flavor">FLAVOR OF THE MONTH</a>
-          <ul class="gnb-depth2">
-            <li class="gnb-depth2-item">
-              <a href="" class="gnb-depth2-link"><img src="images/img_happypoint_app%20(1).jpg" alt="welcome"></a></li>
-            <li>
-              <a href="" class="gnb-depth2-link"><img src="images/img_month_1607.png" alt="welcome"></a></li>
-          </ul>
-        </li>
+     <ul class="gnb">
+       <li class="gnb-depth1-item flavor">
+         <a href=""  class="gnb-depth1-link flavor">FLAVOR OF THE MONTH</a>
+         <ul class="gnb-depth2 img">
+           <li>
+             <a href="" class="gnb-depth2-link"><img src="images/img_month_1607.png" alt="welcome"></a></li>
+         </ul>
+       </li>
 
-        <li class="gnb-depth1-item">
-          <a href="" class="gnb-depth1-link menu">MENU</a>
-          <ul class="gnb-depth2">
-            <li class="gnb-depth2-item"><a href="#" class="gnb-depth2-link">아이스크림</a></li>
-            <li class="gnb-depth2-item"><a href="#" class="gnb-depth2-link">아이스크림케이크</a></li>
-            <li class="gnb-depth2-item"><a href="#" class="gnb-depth2-link">음료</a></li>
-            <li class="gnb-depth2-item"><a href="#" class="gnb-depth2-link">커피</a></li>
-            <li class="gnb-depth2-item"><a href="#" class="gnb-depth2-link">디저트</a></li>
-          </ul>
-        </li>
+       <li class="gnb-depth1-item menu">
+         <a href="" class="gnb-depth1-link menu">MENU</a>
+         <ul class="gnb-depth2">
+           <li class="gnb-depth2-item"><a href="#" class="gnb-depth2-link">아이스크림</a></li>
+           <li class="gnb-depth2-item"><a href="#" class="gnb-depth2-link">아이스크림케이크</a></li>
+           <li class="gnb-depth2-item"><a href="#" class="gnb-depth2-link">음료</a></li>
+           <li class="gnb-depth2-item"><a href="#" class="gnb-depth2-link">커피</a></li>
+           <li class="gnb-depth2-item"><a href="#" class="gnb-depth2-link">디저트</a></li>
+         </ul>
+       </li>
 
-        <li class="gnb-depth1-item">
-          <a href="#" class="gnb-depth1-link event">EVENT</a>
-          <ul class="gnb-depth2">
-            <li class="gnb-depth2-item"><a href="#" class="gnb-depth2-link">진행중이벤트</a></li>
-            <li class="gnb-depth2-item"><a href="#" class="gnb-depth2-link">당첨자발표</a></li>
-          </ul>
-        </li>
+       <li class="gnb-depth1-item event">
+         <a href="#" class="gnb-depth1-link event">EVENT</a>
+         <ul class="gnb-depth2">
+           <li class="gnb-depth2-item"><a href="#" class="gnb-depth2-link">진행중이벤트</a></li>
+           <li class="gnb-depth2-item"><a href="#" class="gnb-depth2-link">당첨자발표</a></li>
+         </ul>
+       </li>
 
-        <li class="gnb-depth1-item">
-          <a href="#" class="gnb-depth1-link store">STORE</a>
-          <ul class="gnb-depth2">
-            <li class="gnb-depth2-item"><a href="#" class="gnb-depth2-link">매장찾기</a></li>
-            <li class="gnb-depth2-item"><a href="#" class="gnb-depth2-link">고객센터</a></li>
-          </ul>
-        </li>
+       <li class="gnb-depth1-item store">
+         <a href="#" class="gnb-depth1-link store">STORE</a>
+         <ul class="gnb-depth2">
+           <li class="gnb-depth2-item"><a href="#" class="gnb-depth2-link">매장찾기</a></li>
+           <li class="gnb-depth2-item"><a href="#" class="gnb-depth2-link">고객센터</a></li>
+         </ul>
+       </li>
 
-        <li  class="gnb-depth1-item">
-          <a href="" class="gnb-depth1-link about">ABOUT</a>
-          <ul class="gnb-depth2">
-            <li class="gnb-depth2-item"><a href="#" class="gnb-depth2-link">공지사항</a></li>
-            <li class="gnb-depth2-item"><a href="#" class="gnb-depth2-link">보도자료</a></li>
-            <li class="gnb-depth2-item"><a href="#" class="gnb-depth2-link">채용정보</a></li>
-            <li class="gnb-depth2-item"><a href="#" class="gnb-depth2-link">점포개설문의</a></li>
-            <li class="gnb-depth2-item"><a href="#" class="gnb-depth2-link">CONTACTUS</a></li>
-          </ul>
-        </li>
-      </ul>
+       <li  class="gnb-depth1-item about">
+         <a href="" class="gnb-depth1-link about">ABOUT</a>
+         <ul class="gnb-depth2">
+           <li class="gnb-depth2-item"><a href="#" class="gnb-depth2-link">공지사항</a></li>
+           <li class="gnb-depth2-item"><a href="#" class="gnb-depth2-link">보도자료</a></li>
+           <li class="gnb-depth2-item"><a href="#" class="gnb-depth2-link">채용정보</a></li>
+           <li class="gnb-depth2-item"><a href="#" class="gnb-depth2-link">점포개설문의</a></li>
+           <li class="gnb-depth2-item"><a href="#" class="gnb-depth2-link">CONTACT US</a></li>
+         </ul>
+       </li>
+     </ul>
 
-    </div>
-  </nav>
+   </div>
 
-  <div>
-    <img src="images/img_flaovr_month_top.jpg" alt="Jungle"/>
-  </div>
+    <div class="gnb-bg"></div>
+ </nav>
 
-
-
-  <section>
-    <div>
-      <img src="images/img_main_banner_10.jpg" alt="이벤트">
-    </div>
-
-    <div>
-      <h2>
-      <img src="images/h_event.png" alt="이벤트"/>
-      </h2>
-    </div>
-
-    <div>
-      <ul>
-        <li>
-          <a href="#" title="cafe bris">
-            <img src="images/u.JPG" alt="이벤트">
-          </a>
-          <div>
-            <ul>
-              <li><a href="#" title="STORE EVENT">
-                <img src="images/stit_store.gif" alt="STORE EVENT">
-              </a>
-              </li>
-              <li><a href="#">Summer Snow CAFE BRIS</a></li>
-              <li><a href="#">상시진행</a></li>
-            </ul>
-          </div>
-        </li>
-        <li>
-          <a href="#" title="베스킨라빈스 혜택">
-            <img src="images/g.JPG" alt="이벤트">
-          </a>
-          <div>
-            <ul>
-              <li><a href="#" title="STORE EVENT">
-                  <img src="images/stit_store.gif" alt="STORE EVENT">
-              </a>
-              </li>
-              <li><a href="#">제휴 할인 카드 혜택 안내</a></li>
-              <li><a href="#">상시진행</a></li>
-            </ul>
-          </div>
-        </li>
-        <li>
-          <a href="#" title="happy order">
-            <img src="images/oo.JPG" alt="이벤트">
-          </a>
-          <div>
-            <ul>
-              <li><a href="#" title="HAPPYPOINT EVENT">
-                <img src="images/stit_happypoint.gif" alt="HAPPYPOINT EVENT">
-              </a>
-              </li>
-              <li><a href="#">해피오더에서만 만날 수 있는 그랜드, 해피팍스!</a></li>
-              <li><a href="#">상시진행</a></li>
-            </ul>
-          </div>
-        </li>
-        <li>
-          <a href="#" title="SIZE UP">
-            <a href="#"><img src="images/u.JPG" alt="이벤트"></a>
-          </a>
-
-          <div>
-            <ul>
-              <li><a href="#" title="SIZE UP">
-                    <img src="images/stit_store.gif" alt="이벤트">
-                  </a>
-              </li>
-              <li><a href="#">31DAY! 패밀리를 하프갤런으로 사이즈 업!</a></li>
-              <li><a href="#">상시진행</a></li>
-            </ul>
-          </div>
-        </li>
-      </ul>
-    </div>
-
-    <div>
-      <img src="images/h_event.png" alt="BR MENU"/>
-    </div>
-
-    <div>
-      <ul>
-        <li>
-          <a href="#" title="ICECREAM">
-            <img src="images/img_menu_list_03.png"  alt="ICECREAM">
-          </a>
-          <div>
-            <ul>
-              <li><a href="#">ICECREAM</a></li>
-              <li><a href="#">프리미엄 아이스크림의 기준, 베스킨라빈스</a></li>
-            </ul>
-          </div>
-        </li>
-        <li>
-          <a href="#" title="BAVERAGE">
-          <a href="#"><img src="images/img_menu_list_05.png"  alt="BAVERAGE"></a>
-          </a>
-          <div>
-            <ul>
-              <li><a href="#">BAVERAGE</a></li>
-              <li><a href="#">아이스크림으로 즐기는 베스킨라빈스만의 음료!</a></li>
-            </ul>
-          </div>
-        </li>
-
-        <li>
-          <a href="#" title="COFFEE">
-            <a href="#"><img src="images/img_menu_list_08.png"  alt="COFFEE"></a>
-          </a>
-          <div>
-            <ul>
-              <li><a href="#">COFFEE</a></li>
-              <li><a href="#">베스킨라빈스만의 부드러운 촉감과 달콤한 풍미!</a></li>
-            </ul>
-          </div>
-        </li>
+ <div>
+   <img src="images/img_flaovr_month_top.jpg" alt="Jungle"/>
+ </div>
 
 
-        <li>
-          <a href="#" title="DESSERT">
-            <a href="#"><img src="images/img_menu_list_10.png"  alt="DESSERT"/></a>
-          </a>
-          <div>
-            <ul>
-              <li><a href="#">DESSERT</a></li>
-              <li><a href="#">아이스크림을 더욱이 재밌게! 간편하게 즐기는 방법!</a></li>
-            </ul>
-          </div>
-        </li>
 
-        <li>
-          <a href="#" title="GIFT">
-            <a href="#"><img src="images/img_menu_list_09.png"  alt="GIFT"></a>
-          </a>
-          <div>
-            <ul>
-              <li><a href="#">GIFT</a></li>
-            </ul>
-          </div>
-        </li>
+ <section>
+   <div>
+     <img src="images/img_main_banner_10.jpg" alt="이벤트">
+   </div>
 
-        <li>
-          <a href="#" title="ICECREAM CAKE">
-            <a href="#"><img src="images/img_menu_list_03-03.png"  alt="ICECREAM CAKE"/></a>
-          </a>
-          <div>
-            <ul>
-              <li><a href="#">ICECREAM CAKE</a></li>
-              <li><a href="#">아이와 어른이 좋아하는 아이스크림을 하나의 케이크에서 모두 즐기세요!</a></li>
-            </ul>
-          </div>
-        </li>
+   <div>
+     <h2>
+     <img src="images/h_event.png" alt="이벤트"/>
+     </h2>
+   </div>
 
-      </ul>
+   <div>
+     <ul>
+       <li>
+         <a href="#" title="cafe bris">
+           <img src="images/u.JPG" alt="이벤트">
+         </a>
+         <div>
+           <ul>
+             <li><a href="#" title="STORE EVENT">
+               <img src="images/stit_store.gif" alt="STORE EVENT">
+             </a>
+             </li>
+             <li><a href="#">Summer Snow CAFE BRIS</a></li>
+             <li><a href="#">상시진행</a></li>
+           </ul>
+         </div>
+       </li>
+       <li>
+         <a href="#" title="베스킨라빈스 혜택">
+           <img src="images/g.JPG" alt="이벤트">
+         </a>
+         <div>
+           <ul>
+             <li><a href="#" title="STORE EVENT">
+                 <img src="images/stit_store.gif" alt="STORE EVENT">
+             </a>
+             </li>
+             <li><a href="#">제휴 할인 카드 혜택 안내</a></li>
+             <li><a href="#">상시진행</a></li>
+           </ul>
+         </div>
+       </li>
+       <li>
+         <a href="#" title="happy order">
+           <img src="images/oo.JPG" alt="이벤트">
+         </a>
+         <div>
+           <ul>
+             <li><a href="#" title="HAPPYPOINT EVENT">
+               <img src="images/stit_happypoint.gif" alt="HAPPYPOINT EVENT">
+             </a>
+             </li>
+             <li><a href="#">해피오더에서만 만날 수 있는 그랜드, 해피팍스!</a></li>
+             <li><a href="#">상시진행</a></li>
+           </ul>
+         </div>
+       </li>
+       <li>
+         <a href="#" title="SIZE UP">
+           <a href="#"><img src="images/u.JPG" alt="이벤트"></a>
+         </a>
 
-    </div>
+         <div>
+           <ul>
+             <li><a href="#" title="SIZE UP">
+                   <img src="images/stit_store.gif" alt="이벤트">
+                 </a>
+             </li>
+             <li><a href="#">31DAY! 패밀리를 하프갤런으로 사이즈 업!</a></li>
+             <li><a href="#">상시진행</a></li>
+           </ul>
+         </div>
+       </li>
+     </ul>
+   </div>
 
-  </section>
+   <div>
+     <img src="images/h_event.png" alt="BR MENU"/>
+   </div>
 
-  <footer>
-    <div>
-      <ul>
-        <li><a href="#">점포개설문의</a></li>
-        <li><a href="#">채용문의</a></li>
-        <li><a href="#">이용약관</a></li>
-        <li><a href="#">개인정보취급방침</a></li>
-        <li><a href="#">거래희망회사 사전등록</a></li>
-      </ul>
-    </div>
+   <div>
+     <ul>
+       <li>
+         <a href="#" title="ICECREAM">
+           <img src="images/img_menu_list_03.png"  alt="ICECREAM">
+         </a>
+         <div>
+           <ul>
+             <li><a href="#">ICECREAM</a></li>
+             <li><a href="#">프리미엄 아이스크림의 기준, 베스킨라빈스</a></li>
+           </ul>
+         </div>
+       </li>
+       <li>
+         <a href="#" title="BAVERAGE">
+         <a href="#"><img src="images/img_menu_list_05.png"  alt="BAVERAGE"></a>
+         </a>
+         <div>
+           <ul>
+             <li><a href="#">BAVERAGE</a></li>
+             <li><a href="#">아이스크림으로 즐기는 베스킨라빈스만의 음료!</a></li>
+           </ul>
+         </div>
+       </li>
 
-    <div>
-      <ul>
-        <li>
-          <a href="#">
-            <img src="images/btn_happypoint.png">
-          </a>
-        </li>
-
-        <li>
-          <a href="#">
-            <img src="images/btn_celectory.gif">
-          </a>
-        </li>
-
-        <li>
-          <a href="#">
-            <img src="images/btn_norton.gif">
-          </a>
-        </li>
-
-        <li>
-          <a href="#">
-            <img src="images/btn_ccm.gif">
-          </a>
-        </li>
-
-        <li>
-          <a href="#">
-            <img src="images/btn_ksa.png">
-          </a>
-        </li>
-
-        <li>
-          <a href="#">
-            <img src="images/btn_happypoint.png">
-          </a>
-        </li>
-
-        <li>
-          <select>
-            <option>던킨도너츠</option>
-            <option>파리바게트</option>
-            <option>샤니</option>
-            <option>파스쿠찌</option>
-            <option>해피포인트카드</option>
-            <option>3R코리아</option>
-            <option>SPC전자사보</option>
-            <option>SPC그룹사이트</option>
-            <option>베스킨 스쿨</option>
-          </select>
-        </li>
-      </ul>
-
-      
-      <div>
-        <img src="images/footer_logo.png"/>
-      </div>
-
-      <div>
-        <address>
-          <div>사업자 등록번호 : 303-81-09535</div>
-          <div>(주)비알코리아 대표이사 조상호</div>
-          <div>서울특별시 서초구 남부순환로 2620(양재동 11-149번지)</div>
-          <div>TEL : 080-555-3131</div>
-          <div>개인정보관리책임자:최종영</div>
-          <div>전자우편주소:mun@spc.co.kr</div>
-        </address>
-      </div>
-
-      <div>
-        Copyright &copy; 2016 BRKOREA Company. All Rights Reserved.
-      </div>
-
-    </div>
+       <li>
+         <a href="#" title="COFFEE">
+           <a href="#"><img src="images/img_menu_list_08.png"  alt="COFFEE"></a>
+         </a>
+         <div>
+           <ul>
+             <li><a href="#">COFFEE</a></li>
+             <li><a href="#">베스킨라빈스만의 부드러운 촉감과 달콤한 풍미!</a></li>
+           </ul>
+         </div>
+       </li>
 
 
-  </footer>
+       <li>
+         <a href="#" title="DESSERT">
+           <a href="#"><img src="images/img_menu_list_10.png"  alt="DESSERT"/></a>
+         </a>
+         <div>
+           <ul>
+             <li><a href="#">DESSERT</a></li>
+             <li><a href="#">아이스크림을 더욱이 재밌게! 간편하게 즐기는 방법!</a></li>
+           </ul>
+         </div>
+       </li>
+
+       <li>
+         <a href="#" title="GIFT">
+           <a href="#"><img src="images/img_menu_list_09.png"  alt="GIFT"></a>
+         </a>
+         <div>
+           <ul>
+             <li><a href="#">GIFT</a></li>
+           </ul>
+         </div>
+       </li>
+
+       <li>
+         <a href="#" title="ICECREAM CAKE">
+           <a href="#"><img src="images/img_menu_list_03-03.png"  alt="ICECREAM CAKE"/></a>
+         </a>
+         <div>
+           <ul>
+             <li><a href="#">ICECREAM CAKE</a></li>
+             <li><a href="#">아이와 어른이 좋아하는 아이스크림을 하나의 케이크에서 모두 즐기세요!</a></li>
+           </ul>
+         </div>
+       </li>
+
+     </ul>
+
+   </div>
+
+ </section>
+
+ <footer>
+   <div>
+     <ul>
+       <li><a href="#">점포개설문의</a></li>
+       <li><a href="#">채용문의</a></li>
+       <li><a href="#">이용약관</a></li>
+       <li><a href="#">개인정보취급방침</a></li>
+       <li><a href="#">거래희망회사 사전등록</a></li>
+     </ul>
+   </div>
+
+   <div>
+     <ul>
+       <li>
+         <a href="#">
+           <img src="images/btn_happypoint.png">
+         </a>
+       </li>
+
+       <li>
+         <a href="#">
+           <img src="images/btn_celectory.gif">
+         </a>
+       </li>
+
+       <li>
+         <a href="#">
+           <img src="images/btn_norton.gif">
+         </a>
+       </li>
+
+       <li>
+         <a href="#">
+           <img src="images/btn_ccm.gif">
+         </a>
+       </li>
+
+       <li>
+         <a href="#">
+           <img src="images/btn_ksa.png">
+         </a>
+       </li>
+
+       <li>
+         <a href="#">
+           <img src="images/btn_happypoint.png">
+         </a>
+       </li>
+
+       <li>
+         <select>
+           <option>던킨도너츠</option>
+           <option>파리바게트</option>
+           <option>샤니</option>
+           <option>파스쿠찌</option>
+           <option>해피포인트카드</option>
+           <option>3R코리아</option>
+           <option>SPC전자사보</option>
+           <option>SPC그룹사이트</option>
+           <option>베스킨 스쿨</option>
+         </select>
+       </li>
+     </ul>
+
+
+     <div>
+       <img src="images/footer_logo.png"/>
+     </div>
+
+     <div>
+       <address>
+         <div>사업자 등록번호 : 303-81-09535</div>
+         <div>(주)비알코리아 대표이사 조상호</div>
+         <div>서울특별시 서초구 남부순환로 2620(양재동 11-149번지)</div>
+         <div>TEL : 080-555-3131</div>
+         <div>개인정보관리책임자:최종영</div>
+         <div>전자우편주소:mun@spc.co.kr</div>
+       </address>
+     </div>
+
+     <div>
+       Copyright &copy; 2016 BRKOREA Company. All Rights Reserved.
+     </div>
+
+   </div>
+
+
+ </footer>
 
 
 
