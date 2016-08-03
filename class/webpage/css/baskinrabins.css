@@ -182,7 +182,7 @@
 }
 
 .gnb-depth2.img{
-  margin-top:0px;
+  margin-top:0;
 }
 
 .gnb-depth2-item{
@@ -231,4 +231,254 @@
   background:#f0eb1b url(../images/img_main_banner_2.jpg) no-repeat 50% 0;
 }
 
+.br-event-heading{
+  width:87px;
+  height:14px;
+  text-indent: -99999em;
+  background:url(../images/h_event.png) no-repeat ;
+  margin:100px auto 50px;
+}
 
+.event-list:after{
+  content:"";
+  display:block;
+  clear:both;
+}
+
+.event-list-item{
+  float: left;
+  margin-right: 16px;
+  width:288px;
+
+}
+
+
+ .event-list-item.last{
+  margin-right:0;
+}
+
+
+/* 다른 selector 쓰는 방법*/
+
+/*
+  1.last-child
+
+ .event-list-item:last-child{
+    margin-right:0;
+}
+
+
+ 2. first-child
+
+  .event-list-item{
+    float:left;
+    margin-left:16px;
+}
+
+.event-list-item:first-child{
+  margin-left:0;
+}
+*/
+
+
+.event-list-item .event-item-module .event-item-title img{
+  width: 288px;
+}
+.event-item-text{
+  margin-top:20px;
+}
+
+/* 가상 selector 쓰는 방법 2*/
+
+/*
+  3.nth-child
+*/
+
+.event-item-text:nth-child(3){
+  height: 54px;
+  font-size:17px;
+  line-height: 1.6;
+  word-break:break-all;
+  text-align:justify;
+}
+
+.event-item-text:nth-child(3) a{
+  color:#000;
+}
+
+.ir-store-event{
+  width:114px;
+  height:22px;
+  text-indent: -99999em;
+  background:url(../images/stit_store.gif) no-repeat;
+}
+
+.ir-happy-event{
+  width:148px;
+  height: 22px;
+  text-indent: -99999em;
+  background: url(../images/stit_happypoint.gif) no-repeat;
+}
+
+
+.menu-list{
+  width: 1200px;
+  height: 1065px;
+  text-indent: -99999em;
+  background:url(../images/img_menu_list.png)
+}
+
+.br-menu-heading{
+  width:84px;
+  height:14px;
+  text-indent: -99999em;
+  background:url(../images/h_menu.png) no-repeat 0 78px;
+  padding:78px 0 0px;
+  margin:0 auto;
+}
+
+.br-menu{
+  margin-top:100px;
+  background: url(../images/bg_menu.jpg) no-repeat 50% 0;
+}
+
+.br-store-heading{
+  width:87px;
+  height:14px;
+  text-indent: -99999em;
+  background:url(../images/h_store.png) no-repeat 0 95px;
+  padding:95px 0 50px;
+  margin:0 auto;
+}
+
+.happy-order-heading{
+  width:244px;
+  height:14px;
+  text-indent: -99999em;
+  background:url(../images/h_happyorder_delivery.png) no-repeat 0 95px;
+  padding:95px 0 50px;
+  margin:0 auto;
+}
+
+.br-store,
+.happy-order{
+  width:600px;
+  float:left;
+}
+
+.br-store-link{
+  display: block;
+  width: 600px;
+  height:260px;
+  text-indent: -99999em;
+  background: url(../images/img_store.jpg);
+}
+
+
+.happy-order-link{
+  display: block;
+  width: 600px;
+  height:260px;
+  text-indent: -99999em;
+  background: url(../images/img_happyorder_delivery.jpg);
+}
+
+
+.snsbox-heading{
+  width:36px;
+  height:13px;
+  text-indent: -99999em;
+  background:url(../images/h_sns.png) no-repeat 0 95px;
+  padding:95px 0 50px;
+  margin:0 auto;
+}
+
+.snsbox-list{
+  width:328px;
+  margin:0 auto 35px;
+}
+
+.snsbox-list-item{
+  float:left;
+  margin:0 10px;
+}
+
+.insta-list-item{
+  float:left;
+  width: 200px;
+  height: 200px;
+}
+
+
+
+.insta-list-item a{
+  display: block;
+}
+
+
+.insta-list-item img{
+  width: 200px;
+  height: 200px;
+  display: block;
+}
+
+
+
+
+.clearfix:after{
+  content:"";
+  display:block;
+  clear:both;
+}
+
+.footer{
+  border-top:1px solid #feaf2b;
+  margin-top:150px;
+}
+
+.terms-list-item{
+  float:left;
+  width:20%;
+  text-align: center;
+  line-height: 77px;
+}
+
+
+.alliance-list{
+  margin-top: 22px;
+  text-align:center;
+}
+
+
+.alliance-list-item{
+  display:inline-block;
+  margin-right: 40px;
+}
+
+.footer-logo{
+  margin:48px 0 35px;
+  text-align: center;
+}
+
+
+.address{
+  text-align: center;
+}
+
+.address-item{
+  display: inline-block;
+  padding-right: 15px;
+}
+
+.address-item:last-child{
+  padding-right: 0;
+}
+
+.bottom-line{
+  margin-top: 10px;
+}
+
+.copyright{
+  text-align: center;
+  margin: 12px 0 50px;
+}
